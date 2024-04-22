@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locadora de Filmes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    section {
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    ul {
+      background-color: #ddd;
+    }
+    #locado {
+      background-color: red;
+    }
+    #naoLocado {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Locadora de Filmes</h1>
+</header>
+
+<section>
+  <h2>Filmes Disponíveis</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Ano de Lançamento</th>
+        <th>Gênero</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="filme1">
+        <td>Matrix</td>
+        <td>1999</td>
+        <td>Ficção Científica</td>
+      </tr>
+      <tr class="filme2">
+        <td>O Poderoso Chefão</td>
+        <td>1972</td>
+        <td>Drama</td>
+      </tr>
+      <tr class="filme3">
+        <td>Interestelar</td>
+        <td>2014</td>
+        <td>Ficção Científica</td>
+      </tr>
+      <tr class="filme4">
+        <td>O Senhor dos Anéis: A Sociedade do Anel</td>
+        <td>2001</td>
+        <td>Aventura</td>
+      </tr>
+      <tr class="filme5">
+        <td>De Volta para o Futuro</td>
+        <td>1985</td>
+        <td>Aventura</td>
+      </tr>
+      <tr class="filme6">
+        <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+        <td>1977</td>
+        <td>Ficção Científica</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Locações Realizadas</h2>
+  <table id = "locacao">
+    <thead>
+      <tr>
+        <th>Data de Locação</th>
+        <th>Data de Devolução</th>
+        <th>Nome do Cliente</th>
+        <th>Filme Locado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="filme1">
+        <td>01/04/2024</td>
+        <td class="data-devolucao">08/04/2024</td>
+        <td>João da Silva</td>
+        <td>Matrix</td>
+      </tr>
+      <tr class="filme2">
+        <td>03/04/2024</td>
+        <td class="data-devolucao"></td>
+        <td>Maria Oliveira</td>
+        <td>O Poderoso Chefão</td>
+      </tr>
+      <tr class="filme3">
+        <td>05/04/2024</td>
+        <td class="data-devolucao">12/04/2024</td>
+        <td>Carlos Santos</td>
+        <td>Interestelar</td>
+      </tr>
+      <tr class="filme4">
+        <td>07/04/2024</td>
+        <td class="data-devolucao"></td>
+        <td>Fernanda Souza</td>
+        <td>O Senhor dos Anéis: A Sociedade do Anel</td>
+      </tr>
+      <tr class="filme5">
+        <td>10/04/2024</td>
+        <td class="data-devolucao"></td>
+        <td>Rafael Silva</td>
+        <td>De Volta para o Futuro</td>
+      </tr>
+      <tr class="filme6">
+        <td>12/04/2024</td>
+        <td class="data-devolucao">19/04/2024</td>
+        <td>Patrícia Lima</td>
+        <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+      </tr>
+      <!-- Adicione mais locações aqui -->
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="cards-container">
+    <div class="card">
+      <h3>Filmes locados</h3>
+      <p id="filmes-locados">0</p>
+    </div>
+    <div class="card">
+      <h3>Filmes locados</h3>
+      <p id="filmes-estoque">0</p>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+<script>
+var locado = document.getElementById('locado')
+var naoLocado = document.getElementById('naoLocado')
+var filmesLocadosElement = document.getElementById('filmes-locados')
+var filmesEstoqueElement = document.getElementById('filmes-estoque')
+filmesEstoqueElement.textContent = "3"
+filmesLocadosElement.textContent = "3"
+const devolucao = document.getElementsByClassName('data-devolucao')
+const filme1 = document.getElementsByClassName('filme1')
+if(filme1.devolucao.textContent.trim() === ""){
+  locado.filme1.add('locado')
+}
+const filme2 = document.getElementsByClassName('filme2')
+const filme3 = document.getElementsByClassName('filme3')
+const filme4 = document.getElementsByClassName('filme4')
+const filme5 = document.getElementsByClassName('filme5')
+const filme6 = document.getElementsByClassName('filme6')
+
+
+</script>
+</html>
+
+
+
+
+
